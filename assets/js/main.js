@@ -198,10 +198,10 @@ var questions = [
   }
   
   // Timer function
-  function timerHolder() {
+  function timerHolder(unanswered) {
     clearInterval(clock);
     clock = setInterval(seconds, 1000);
-    function seconds() {
+    function seconds(unanswered) {
       if (timer === 0) {
         clearInterval(clock);
         unanswered();
@@ -225,6 +225,7 @@ var questions = [
   
   // Reset the game
   function resetGame() {
+    console.log("reset button");
     counter = 0;
     correctCounter = 0;
     incorrectCounter = 0;
