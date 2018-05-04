@@ -1,5 +1,5 @@
 body {
-    background-image: url("/Users/niyatishah/Desktop/my-code/space-trivia-game/assets/images/darkness.png");
+    background-image: url("../../assets/images/darkness.png");
     font-family: 'Signika', sans-serif;
     color: white;
   }
