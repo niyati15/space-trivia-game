@@ -48,7 +48,7 @@ var questions = [
     {
       question: ' To weigh roughly two-thirds less than what you do on Earth, which planet would you be on?',
       answers: [
-        { answer: 'A. Uranus', value: false },
+        { answer: 'A. Uranus', value: falsex },
         { answer: 'B. Mars', value: true },
         { answer: 'C. Venus', value: false },
         { answer: 'D. Jupiter', value: false }
