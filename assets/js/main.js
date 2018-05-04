@@ -3,91 +3,91 @@ var questions = [
     {
       question: 'The day on which the Sun’s direct rays cross the celestial equator is called?',
       answers: [
-        { answer: 'the solstice', value: false },
-        { answer: 'the equinox', value: true },
-        { answer: 'the ecliptic', value: false },
-        { answer: 'Easter', value: false }
+        { answer: 'A. the solstice', value: false },
+        { answer: 'B. the equinox', value: true },
+        { answer: 'C. the ecliptic', value: false },
+        { answer: 'D. Easter', value: false }
       ]
     },
     {
       question: 'Who invented the telescope?',
       answers: [
-        { answer: 'Johannes Kepler', value: false },
-        { answer: 'Galileo', value: false },
-        { answer: 'A. Hans Lippershey', value: true },
-        { answer: 'Archimedes', value: false }
+        { answer: 'A. Johannes Kepler', value: false },
+        { answer: 'B. Galileo', value: false },
+        { answer: 'C. Hans Lippershey', value: true },
+        { answer: 'D. Archimedes', value: false }
       ]
     },
     {
       question: 'Which of these objects is the farthest from the Sun?',
       answers: [
-        { answer: '90377 Sedna', value: true },
-        { answer: 'Saturn', value: false },
-        { answer: 'Kuiper belt', value: false },
-        { answer: 'Neptune', value: false }
+        { answer: 'A. 90377 Sedna', value: true },
+        { answer: 'B. Saturn', value: false },
+        { answer: 'C. Kuiper belt', value: false },
+        { answer: 'D. Neptune', value: false }
       ]
     },
     {
       question: 'What term describes the alignment of three celestial bodies?',
       answers: [
-        { answer: 'symbology', value: false },
-        { answer: 'suzerainty', value: false },
-        { answer: 'sizzle', value: false },
-        { answer: 'syzygy', value: true }
+        { answer: 'A. symbology', value: false },
+        { answer: 'B. suzerainty', value: false },
+        { answer: 'C. sizzle', value: false },
+        { answer: 'D. syzygy', value: true }
       ]
     },
     {
       question: "What is the visible part of the Sun called?",
       answers: [
-        { answer: 'the stratosphere', value: false },
-        { answer: 'the photosphere', value: true },
-        { answer: 'the atmosphere', value: false },
-        { answer: 'the lithosphere', value: false }
+        { answer: 'A. the stratosphere', value: false },
+        { answer: 'B. the photosphere', value: true },
+        { answer: 'C. the atmosphere', value: false },
+        { answer: 'D. the lithosphere', value: false }
       ]
     },
     {
       question: 'What makes a planet a dwarf planet?',
       answers: [
-        { answer: 'Controls the vertical stacking order of elements that overlap', value: true },
-        { answer: 'Moves elements off screen', value: false },
-        { answer: 'Hides elements from the screen', value: false },
-        { answer: 'Controls the horizontal stacking order of elements that overlap', value: false }
+        { answer: 'A. Controls the vertical stacking order of elements that overlap', value: true },
+        { answer: 'B. Moves elements off screen', value: false },
+        { answer: 'C. Hides elements from the screen', value: false },
+        { answer: 'D. Controls the horizontal stacking order of elements that overlap', value: false }
       ]
     },
     {
       question: 'What is the box model?',
       answers: [
-        { answer: 'size and shape', value: true },
-        { answer: 'distance from the Sun', value: false },
-        { answer: 'smell', value: false },
-        { answer: 'color', value: false }
+        { answer: 'A. size and shape', value: true },
+        { answer: 'B. distance from the Sun', value: false },
+        { answer: 'C. smell', value: false },
+        { answer: 'D. color', value: false }
       ]
     },
     {
       question: 'What two motions do all planets have?',
       answers: [
-        { answer: 'Wiggle and wobble', value: false },
-        { answer: 'orbit and spin', value: true },
-        { answer: 'twist and shout', value: false },
-        { answer: 'rock and roll', value: false }
+        { answer: 'A. Wiggle and wobble', value: false },
+        { answer: 'B. orbit and spin', value: true },
+        { answer: 'C. twist and shout', value: false },
+        { answer: 'D. rock and roll', value: false }
       ]
     },
     {
       question: 'Approximately how many miles are there in a light year?',
       answers: [
-        { answer: '5.9 trillion', value: true },
-        { answer: '5.9 billion', value: false },
-        { answer: '5.9 million', value: false },
-        { answer: '590,000', value: false }
+        { answer: 'A. 5.9 trillion', value: true },
+        { answer: 'B. 5.9 billion', value: false },
+        { answer: 'C. 5.9 million', value: false },
+        { answer: 'D. 590,000', value: false }
       ]
     },
     {
       question: 'Which is the name of a radio source that is very far from Earth?',
       answers: [
-        { answer: 'tracer', value: false },
-        { answer: 'quasar', value: true },
-        { answer: 'phaser', value: false },
-        { answer: 'taser', value: false }
+        { answer: 'A. tracer', value: false },
+        { answer: 'B. quasar', value: true },
+        { answer: 'C. phaser', value: false },
+        { answer: 'D. taser', value: false }
       ]
     }
   
@@ -166,7 +166,7 @@ var questions = [
   function startGame() {
     $('.start-page').css('display', 'none');
     $('.questions-page').css('visibility', 'visible');
-    $('.timer').html('<p>Time remaining: <span class="time">10</span></p>');
+    $('.timer').html('<p>Time left: <span class="time">10</span></p>');
   
     $('.question').html(questions[counter].question);
     var showingAnswers =
@@ -186,12 +186,13 @@ var questions = [
   }
   
   function questionCounter() {
-    if (counter < 6) {
+    if (counter < 9) {
       counter++;
       startGame();
       timer = 10;
       timerHolder();
     } else {
+      console.log("finish game");
       finishGame();
     }
   }
@@ -214,7 +215,7 @@ var questions = [
   // Finishing the game
   function finishGame() {
     var final = $('.main')
-      .html("<p>All done, here's how you did!<p><br><br>")
+      .html("<p>Score Card:<p><br><br>")
       .append('<p>Correct Answers: ' + correctCounter + '</p><br>')
       .append('<p>Wrong Answers: ' + incorrectCounter + '</p>');
     $(final).attr('<div>');

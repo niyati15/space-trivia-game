@@ -1,6 +1,6 @@
 body {
     background-image: url("/Users/niyatishah/Desktop/my-code/space-trivia-game/assets/images/darkness.png");
-    font-family: Helsinki;
+    font-family: 'Signika', sans-serif;
     color: white;
   }
   
@@ -15,14 +15,13 @@ body {
   }
   
   .img-initial {
-    background: url('../images/trivia-game.png') no-repeat center top;
-    background-size: 70%;
-    height: 520px;
+    /* background: url('../images/rocket.png') no-repeat center top; */
+    /* background-size: 70%; */
+    height: 320px;
   }
   
   .start-btn {
     width: 200px;
-    color: #631172;
     font-size: 36px;
     border-radius: 50px;
     background: #fed501;
@@ -64,6 +63,7 @@ body {
     background-color: white;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 25px;
   }
   
   .gif {
