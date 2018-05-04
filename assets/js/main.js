@@ -46,16 +46,16 @@ var questions = [
       ]
     },
     {
-      question: 'What makes a planet a dwarf planet?',
+      question: ' To weigh roughly two-thirds less than what you do on Earth, which planet would you be on?',
       answers: [
-        { answer: 'A. Controls the vertical stacking order of elements that overlap', value: true },
-        { answer: 'B. Moves elements off screen', value: false },
-        { answer: 'C. Hides elements from the screen', value: false },
-        { answer: 'D. Controls the horizontal stacking order of elements that overlap', value: false }
+        { answer: 'A. Uranus', value: false },
+        { answer: 'B. Mars', value: true },
+        { answer: 'C. Venus', value: false },
+        { answer: 'D. Jupiter', value: false }
       ]
     },
     {
-      question: 'What is the box model?',
+      question: 'What makes a planet a dwarf planet?',
       answers: [
         { answer: 'A. size and shape', value: true },
         { answer: 'B. distance from the Sun', value: false },
